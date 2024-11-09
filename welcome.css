@@ -27,13 +27,14 @@
     /* padding: 50px; */
     height: 50vh;
     max-width: 90%;
-    font-size: 20px;
+    font-size: 10px;
     padding: 20px;
   }
 
   h1 {
     color: #4c207b;
     font-size: 40px;
+    font-weight: bold;
     margin-bottom: 10px;
   }
 
@@ -43,7 +44,7 @@
 
   p {
     color: #666;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 1.5;
     margin-bottom: 20px;
   }
@@ -68,7 +69,7 @@
   }
 
   .note {
-    font-size: 20px;
+    font-size: 15px;
     color: #999;
     margin-top: 15px;
     /* position: absolute; */

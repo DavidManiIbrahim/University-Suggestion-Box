@@ -5,25 +5,20 @@
   font-family: Arial, sans-serif;
 }
 
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-
-  background-color: #f7f7f7;
-} */
+body {
+  overflow: hidden;
+}
 
 .container {
   width: 70%;
-  height: 70%;
+  height: 60%;
   /* border: 1px solid; */
   /* max-width: 600px; */
   /* background-color: #fff; */
   /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
   padding: 50px;
-  top: 200px;
-  left: 300px;
+  top: 50px;
+  left: 250px;
   border-radius: 10px;
   position: relative;
 }
@@ -38,7 +33,7 @@
 
 h1 {
   color: #4c207b;
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 10px;
 }
 
@@ -48,7 +43,7 @@ h1 span {
 
 p {
   color: #666;
-  font-size: 25px;
+  font-size: 15px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -63,7 +58,7 @@ label {
 
 .input-box {
   width: 100%;
-  padding: 20px;
+  padding: 10px;
   font-size: 20px;
   border: 1px dashed #a459c4;
   border-radius: 5px;
@@ -86,7 +81,7 @@ label {
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 

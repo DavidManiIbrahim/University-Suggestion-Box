@@ -1,18 +1,21 @@
 <?php 
 
-include("index.html");
+include("suggestion.html");
+// include("index.html");
 
 require_once("config.php");
 
-$data = $_POST["input"];
-// echo $data;
+$title = $_POST["title"];
+$description = $_POST["description"];
+// echo $title;
 
-if (empty($data)) {
+// if ($title == "" || $description == "") {
+if (empty($title) && empty($description)) {
     echo "Please fill in all fields.";
     exit;
 }else{
 
-$query = "INSERT INTO `suggestions` (`id`,`suggestion`) VALUES (NULL,'$data')";
+$query = "INSERT INTO `suggestions` (`id`,`title`,`suggestion`) VALUES (NULL,'$title','$description')";
 $result =  mysqli_query($conn, $query);
 
 }

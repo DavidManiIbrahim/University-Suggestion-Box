@@ -63,22 +63,6 @@
     margin: 10px 0;
   }
 
-  /* Suggestion headers */
-  .suggestion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border: 1px solid #d8b4f1;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    width: 100%;
-    cursor: pointer;
-    /* max-width: 400px; */
-    font-size: 16px;
-    color: #4e2a8e;
-    font-weight: bold;
-  }
 
 
 
@@ -99,3 +83,38 @@
   .suggestion select:focus {
     outline: none;
   }
+
+.date{
+    position: absolute;
+    right: 100px;
+    font-weight: 600;
+}
+
+  .box{
+    border: 1px solid #4e2a8e;
+    width: 100%;
+    /* border: 1px solid; */
+    /* border-radius: 8px; */
+    /* border-radius: 20px; */
+    margin: auto;
+    padding: 2%;
+    margin-bottom: 1%;
+}
+
+.head{
+    text-align: center;
+    color: #4e2a8e;
+}
+
+.txt1{
+    margin-top: 5px;
+}
+
+button{
+    cursor: pointer;
+    float: right;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    /* background-color: paleturquoise; */
+}

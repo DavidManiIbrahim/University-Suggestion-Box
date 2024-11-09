@@ -13,13 +13,13 @@
     <h1>Share Your <span>Suggestion</span></h1>
     <p>We’d love to hear from you! Please provide as much detail as you’d like.</p>
     
-    <form id="suggestionForm" onsubmit="return validateForm()">
+    <form id="suggestionForm" method="post" onsubmit="return validateForm()" action="index.php">
       <label for="title">Title: (Optional)</label>
-      <input type="text" id="title" class="input-box" placeholder="Brief title for your suggestion">
+      <input type="text" name="title" id="title" class="input-box" placeholder="Brief title for your suggestion">
       <div id="titleError" class="error"></div>
       
       <label for="description">Description:</label>
-      <textarea id="description" class="input-box" rows="5" placeholder="Describe your suggestion here..."></textarea>
+      <textarea id="description" name="description" class="input-box" rows="5" placeholder="Describe your suggestion here..."></textarea>
       <div id="descriptionError" class="error"></div>
       <p  id="success"></p>
 
