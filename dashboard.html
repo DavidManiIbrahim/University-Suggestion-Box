@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="./dashboard.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Add jQuery -->
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="./adminpage.html" class="logout"> <img src="./src/assets/logout.png" alt=""> Logout</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="content">
+    <!-- Statistics box -->
+    <div class="stats-box">
+      <p>Total submission</p>
+      <p>4365</p>
+      <p>Recent submission</p>
+      <p>23</p>
+    </div>
+
+    <!-- Suggestion headers with hidden content -->
+    <div class="suggestion">
+      <span class="suggestion-header">Suggestion header</span>
+      <span class="suggestion-date">12/11/2024</span>
+      <div class="suggestion-details" style="display: none;">
+        <p>Details about the suggestion go here.</p>
+      </div>
+    </div>
+    <div class="suggestion">
+      <span class="suggestion-header">Suggestion header</span>
+      <span class="suggestion-date">12/11/2024</span> 
+      
+      <div class="suggestion-details" style="display: none;">
+        <p>Details about the suggestion go here.</p>
+      </div>
+    </div>
+    <div class="suggestion">
+      <span class="suggestion-header">Suggestion header</span>
+      <span class="suggestion-date">12/11/2024</span>
+      <div class="suggestion-details" style="display: none;">
+        <p>Details about the suggestion go here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery Script for Dropdown Animation -->
+  <script>
+    $(document).ready(function() {
+      $('.suggestion-header').click(function() {
+        // Toggle the dropdown content with slide animation
+        $(this).nextAll('.suggestion-details').first().slideToggle(300);
+      });
+    });
+  </script>
+</body>
+</html>
