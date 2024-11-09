@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggestion Form</title>
+  <link rel="stylesheet" href="suggestion.css">
+  
+</head>
+<body>
+  <img class="circle" src="./src/assets/Ellipse 1.png" alt="">
+  <div class="container">
+    <h1>Share Your <span>Suggestion</span></h1>
+    <p>We’d love to hear from you! Please provide as much detail as you’d like.</p>
+    
+    <form id="suggestionForm" onsubmit="return validateForm()">
+      <label for="title">Title: (Optional)</label>
+      <input type="text" id="title" class="input-box" placeholder="Brief title for your suggestion">
+      <div id="titleError" class="error"></div>
+      
+      <label for="description">Description:</label>
+      <textarea id="description" class="input-box" rows="5" placeholder="Describe your suggestion here..."></textarea>
+      <div id="descriptionError" class="error"></div>
+      <p  id="success"></p>
+
+      <button type="submit" class="btn">Submit Suggestion</button>
+    </form>
+  </div>
+  <script src="./suggestion.js"></script>
+</body>
+</html>
