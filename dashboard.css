@@ -80,11 +80,7 @@
     font-weight: bold;
   }
 
-  .suggestion-header-container {
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
-  }
+
 
   .suggestion-date {
     color: #000;
@@ -102,13 +98,4 @@
 
   .suggestion select:focus {
     outline: none;
-  }
-
-  .suggestion-details {
-    width: 90%;
-    background-color: #f3f3f3;
-    padding: 10px;
-    border-top: 1px solid #ccc;
-   
-    /* margin-top: 45px; Adds space between the header and details */
   }
