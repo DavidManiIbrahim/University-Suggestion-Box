@@ -90,13 +90,17 @@
   .success{
     position: absolute;
     top: 0;
-    color: rgb(10, 204, 52);
-    border: 1px solid;
+    background-color: rgb(10, 204, 52);
+    text-align: center;
+    color: #fff;
+    /* border: 1px solid; */
   }
 
   .error{
-    color: red;
+    background-color: red;
     position: absolute;
     top: 0;
-    border: 1px solid;
+    color: #fff;
+    text-align: center;
+    /* border: 1px solid; */
   }
