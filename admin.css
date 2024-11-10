@@ -57,6 +57,7 @@
 
   .login-button {
     width: 100%;
+    margin-top: 20px;
     padding: 15px;
     text-transform: uppercase;
     font-size: 18px;
@@ -89,18 +90,23 @@
 
   .success{
     position: absolute;
-    top: 0;
-    background-color: rgb(10, 204, 52);
+    top: 58%;
+    padding: 5px;
+    left: 3%;
     text-align: center;
-    color: #fff;
+    /* color: #fff; */
     /* border: 1px solid; */
+    color: rgb(10, 204, 52);
+   
   }
 
   .error{
-    background-color: red;
+    color: red;
     position: absolute;
-    top: 0;
-    color: #fff;
+    top: 58%;
+    padding: 5px;
+    left: 3%;
     text-align: center;
+    /* color: #fff; */
     /* border: 1px solid; */
   }
