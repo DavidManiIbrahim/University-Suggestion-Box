@@ -10,8 +10,8 @@ body {
 }
 
 .container {
-  width: 70%;
-  height: 60%;
+  width: 60%;
+  height: 50%;
   /* border: 1px solid; */
   /* max-width: 600px; */
   /* background-color: #fff; */
@@ -81,7 +81,7 @@ label {
   border-radius: 5px;
   text-decoration: none;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 25px;
   transition: background-color 0.3s ease;
 }
 
@@ -91,10 +91,16 @@ label {
 
 .error {
   color: red;
-  font-size: 20px;
-  margin-top: 5px;
+  font-size: 15px;
+  /* margin-top: 5px; */
+  position: absolute;
+  right: 67%;
+  top: 68%;
 }
 
 #success{
   color: #12be6e;
+  position: absolute;
+  right: 61%;
+  top: 68%;
 }

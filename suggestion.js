@@ -60,8 +60,5 @@ function validateForm() {
     }
     
     
-    // Prevent form submission if validation fails
-    // return isValid;
-        
-        
+
     }
