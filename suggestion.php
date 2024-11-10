@@ -25,7 +25,7 @@ if ($result) {
     echo "<p id='success'>Suggestion Submitted successful!</p>";
     exit;
 }else{
-    echo "<p id='success'>Error please try again.</p>";
+    echo "<p id='error'>Error please try again.</p>";
 }
 
 

@@ -1,33 +1,24 @@
-<?php 
+<?php
 
-include("config.php");
+include('admin.html');
 
-$query = "SELECT * FROM suggestions";
-$result = mysqli_query($conn, $query);
+include('config.php');
 
-echo"<table><tr>";
-while($row = mysqli_fetch_array($result)){ 
-    ?>
- <td><?php echo $row['title']."<br>"?></td>
- <td><?php echo $row['suggestion']."<br>"?></td>
- 
-<?php 
+// if(isset($_POST['signup'])){
+$username = $_POST['user'];
+$password = $_POST['password'];
+// echo $username."<br>";
+// echo $password;
 
-}
+$user_id = "pat";
+$pwd = "josh";
 
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    if (($username === $user_id) && ($password && $pwd ) ){
+        echo "<span class='success'>Login Successful</span>";
+       header("location: dashboard.html");
+    }else{
+        echo "<span class='error'>Invalid user id and password </span>";
+    }
+    
 
 
