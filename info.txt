@@ -1,0 +1,57 @@
+<?php
+
+// Query to get total submissions
+$totalSubmissionsQuery = "SELECT COUNT(*) AS total FROM submissions";
+$totalResult = $conn->query($totalSubmissionsQuery);
+$totalSubmissions = $totalResult->fetch_assoc()['total'];
+
+// Query to get recent submissions (let's say 'recent' means submissions in the last 24 hours)
+$recentSubmissionsQuery = "SELECT COUNT(*) AS recent FROM submissions WHERE submission_date >= NOW() - INTERVAL 1 DAY";
+$recentResult = $conn->query($recentSubmissionsQuery);
+$recentSubmissions = $recentResult->fetch_assoc()['recent'];
+
+// Query to get all submissions data (date, header, and data)
+$submissionsQuery = "SELECT header, data, submission_date FROM submissions ORDER BY submission_date DESC";
+$submissionsResult = $conn->query($submissionsQuery);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Display total and recent submissions -->
+    <div class="stats-box">
+        <p>Total Submissions: <?php echo $totalSubmissions; ?></p>
+        <p>Recent Submissions (last 24 hours): <?php echo $recentSubmissions; ?></p>
+    </div>
+
+    <!-- Display each submission with date, header, and content -->
+    <div class="submissions">
+        <?php
+        if ($submissionsResult->num_rows > 0) {
+            while ($row = $submissionsResult->fetch_assoc()) {
+                echo "<div class='submission'>";
+                echo "<p><strong>Date of Submission:</strong> " . date("d/m/Y H:i", strtotime($row['submission_date'])) . "</p>";
+                echo "<p><strong>Header:</strong> " . htmlspecialchars($row['header']) . "</p>";
+                echo "<p><strong>Data:</strong> " . nl2br(htmlspecialchars($row['data'])) . "</p>";
+                echo "</div><hr>";
+            }
+        } else {
+            echo "<p>No submissions found.</p>";
+        }
+        ?>
+    </div>
+
+</body>
+</html>
+
+<?php
+// Close the database connection
+$conn->close();
+?>

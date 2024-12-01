@@ -2,7 +2,6 @@
 
 include("suggestion.html");
 
-
 require_once("config.php");
 
 $title = $_POST["title"];

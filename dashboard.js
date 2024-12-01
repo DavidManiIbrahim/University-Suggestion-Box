@@ -4,8 +4,10 @@ $(document).ready(function(){
 
     })
 
-    const day = document.getElementsByClassName('date');
-        day.textContent = date('d/m/y');
+})
+  
 
-
-    })
+const day = document.querySelector('.date');
+        day.textContent = d;
+        // day.textContent = date('d/m/y');
+        const d = new Date();
